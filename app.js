@@ -1,5 +1,16 @@
 $(document).ready(function() {
-	for (var i=1; i <= 100; i++) {
+	var number;
+	
+	number = +prompt("Enter number")
+	while (isNaN(number) || number % 1 != 0) {
+		number = +prompt("You did not enter a number. Enter number!")
+	} 
+	
+	fizzbuzz(number);
+});
+
+var fizzbuzz = function(num) {
+	for (var i=1; i <= num; i++) {
 		if (i%3 == 0 && i%5 == 0) {
 			$("body").append("<p>FizzBuzz</p>");
 		}else if (i%3 == 0) {
@@ -10,4 +21,4 @@ $(document).ready(function() {
 			$("body").append("<p>" + i + "</p>");
 		}
 	}
-});
+}
