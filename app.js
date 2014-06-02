@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var number;
 	
 	number = +prompt("Enter number")
-	while (isNaN(number) || number % 1 != 0) {
+	while (isNaN(number) || number % 1 != 0 || number == "") {
 		number = +prompt("You did not enter a number. Enter number!")
 	} 
 	
